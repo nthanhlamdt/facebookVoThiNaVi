@@ -7,7 +7,7 @@
 }
 
 :root {
-    --background-primary: #E4E6EB;
+    --background-primary: :rgba(0,0,0,0.5);
     --background-facebook:#0866FF;
     --color-hover: rgba(0,0,0,0.1);
 }
@@ -18,7 +18,7 @@ html {
 body {
     width: 100%;
     height: 100vh;
-    background-color: var(--background-primary);
+    background-color: rgba(0,0,0,0.05);
     overflow-x: hidden;
 }
 
@@ -481,10 +481,19 @@ body {
 
 /* ------------------------CONTAINER LEFT----------------- */
 /* ------------------------CONTAINER LEFT----------------- */
-.container__left {
+
+.left {
     min-width: 310px;
     overflow-y: hidden;
     scroll-behavior: smooth;
+}
+
+.container__left {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    bottom: 0;
+    width: 310px;
 }
 
 .container__left:hover {
@@ -752,7 +761,6 @@ body {
 
 /*-----------------------------POST------------------------- */
 .post {
-    margin-bottom: 20px;
     background-color: white;
     border-radius: 10px;
     overflow: hidden;
@@ -994,8 +1002,90 @@ body {
 .container__right {
     min-width: 350px;
     height: 100%;
-    background-color: rgb(231, 187, 187);
 }
+
+.right {
+    width: 350px;
+    position: fixed;
+    right: 0;
+    top: 60px;
+    bottom: 0;
+    padding-right: 10px;
+}
+
+.right__birthday {
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    margin-bottom: 15px
+}
+
+.right__birthday-content {
+    display: flex;
+    align-items: center;
+    padding-bottom: 15px;
+}
+
+.right__birthday h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: rgba(0,0,0,0.5);
+}
+
+.right__birthday p {
+    margin-bottom: 0;
+    margin-left: 10px;
+}
+
+.right__birthday p a {
+    text-decoration: none;
+    color: black;
+}
+
+.right__contact {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.right__contact span {
+    font-size: 16px;
+    font-weight: 600;
+    color: rgba(0,0,0,0.5);
+}
+
+.right__contact-icon .right__contact-icon1{
+    margin-right: 15px;
+}
+
+.right__contact-icon svg {
+    color: rgba(0,0,0,0.5);
+}
+
+
+.right__friend {
+    
+}
+
+.right__friend img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.right__friend a {
+    text-decoration: none;
+    color: black;
+    font-weight: 550;
+}
+
+.right__friend-list li {
+    list-style: none;
+    margin-bottom: 15px;
+}
+
 /* ------------------------CONTAINER RIGHT----------------- */
 /* ------------------------CONTAINER RIGHT----------------- */
 

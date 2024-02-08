@@ -442,7 +442,7 @@ var mangChuoi = [
 
 var post_hello = document.querySelector('.container__mid-contentpost');
 function contentImage(i,j, like, cmt, avt) {
-  var htmlCode = `<div class="post">
+  var htmlCode = `<div class="post" style="margin-bottom: 20px">
                     <div class="contentpost__hear">
                         <div class="contentpost__hear-avt">
                             <img src="./image-avata/avata (${avt}).jpg" alt="">
@@ -579,3 +579,15 @@ function randomInRange() {
 //---------------------------------CONTAINER----------------------------------//
 //---------------------------------CONTAINER----------------------------------//
 
+
+var friendList = document.querySelector('.right__friend-list');
+for (var i = 0; i <= 20; i++) {
+    friendListRight(i);
+}
+
+function friendListRight(i) {
+    friendList.innerHTML += `<li>
+                                <img src="./image-content/img (${i}).jpg"" alt="">
+                                <a href="">${nameArr[i]}</a>
+                            </li>`
+}
